@@ -1,0 +1,140 @@
+.sky{
+    height:100%;
+    width:100%;
+    background: rgb(129,186,221);
+    background: -moz-linear-gradient(top, rgb(16, 21, 24) 0%, rgb(64, 48, 88) 100%);
+    background: -webkit-linear-gradient(top, rgb(17, 24, 29) 0%,rgb(55, 42, 77) 100%);
+    background: linear-gradient(to bottom, rgb(15, 22, 26) 0%,rgb(62, 47, 87) 100%);
+    overflow: hidden;
+}
+.dome{
+width:90%;
+height:100%;
+border-radius:50% 50% 0 0;
+/* border:1px solid; */
+transform:scaleY(2);
+position:relative;
+margin:auto;
+top:60%;
+overflow: hidden;
+
+}
+.backgroundsky{
+    background-color: rgb(192, 250, 250);
+    height:100%;
+    width: 100%;
+}
+.ground{
+    width:100%;
+    height:40%;
+    background-color: rgb(54, 42, 38);
+    transform:scaleY(.5);
+
+    position:relative;
+    bottom:70%;
+    overflow: visible;
+}
+
+.invisibleP{
+    display:none;
+}
+
+.bulk{
+    margin:auto;
+    height:200%;
+    width:5%;
+    background-color: cadetblue;
+    position:absolute;
+    border-radius:5px; 
+    bottom:-80%;
+    left:50%;
+    animation:branch2 .5s both;
+    z-index:1
+
+}
+
+
+.branch{
+    margin:auto;
+    width:50%;
+    /* background-color: cadetblue; */
+    position: absolute;
+    transform-origin: bottom;
+    border-radius:5px; 
+    animation:branch .5s both;
+}
+
+@keyframes branch{
+    0%{height:1%}
+    100%{height:70%}
+}
+
+@keyframes branch2{
+    0%{height:1%;bottom:-200%}
+    100%{height:200%;bottom:-40%}
+}
+
+.apple{
+    width:3%;
+    height:auto;
+    padding-top:3%;
+    
+    border-radius: 50%;
+    margin:auto;
+    position:relative;
+    bottom:60%;
+    transform-origin: center;
+}
+
+.apple2{
+    width:3%;
+    height:auto;
+    padding-top:3%;
+    
+    border-radius: 50%;
+    margin:auto;
+    position:absolute;
+    transform-origin: center;
+    z-index:1
+}
+
+.appleFall{
+    animation:appleFall .5s both;
+}
+.appleFall2{
+    animation:appleFall2 .5s both;
+}
+
+@keyframes appleFall{
+    0%{bottom:60%}
+    100%{bottom:0%}
+}
+@keyframes appleFall2{
+    0%{transform:translateY(0%)}
+    100%{transform:translateY(1200%)}
+}
+.apple:hover{
+    transform:scale(1.5)
+}
+.apple2:hover{
+    transform:scale(1.5)
+}
+
+.ripple{
+    position:absolute;
+    width:.2%;
+    height:100%;
+    animation:ripple .6s both;
+    float:left;
+    border-radius:5px;
+  }
+  
+  @keyframes ripple{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(100%)}
+  }
+  .groundRipple{
+    width:100%;
+    height:2.5%;
+    z-index:0
+}
