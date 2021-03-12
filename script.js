@@ -47,17 +47,18 @@ setTimeout(() => {
         
       },1000);
       
-    },200);
+    },400);
     
-  },200);
+  },400);
   
-},200);
-},200);
+},400);
+},500);
 }
 
 
 
 function start(){
+  addStars();
   var letters = '0123456789ABCDEF';
   var color = '#';
   for (var j = 0; j < 6; j++) {
@@ -129,6 +130,22 @@ $(document).on('mouseover','.branch5', e=>{
   console.log(rotation);
    
 })
+
+function addStars(){
+  for(i=0;i<145;i++){
+    var star = $("<div>");
+    star.addClass('star');
+    var XLen = Math.floor(Math.random()*100);
+    var YLen = Math.floor(Math.random()*70)
+    star.css('left',XLen+'%')
+    star.css('top',YLen+'%')
+    $(".sky").append(star);
+
+
+
+  }
+
+}
 
 
 
